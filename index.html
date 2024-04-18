@@ -6,15 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#000" />
-  <meta name="description"
-    content="Gustavo Ast | Portfolio, Visit and know about me & my projects/designs. I value simple content structure, clean design patterns, and thoughtful interactions." />
-  <meta name="keywords"
-    content="gustavo ast,gustavo ast portfolio,Gustavo Ast Portfolio,gustavo ast site,Gustavo Ast,gustavo ast me,gustavo ast web,gustavo ast github,uiverse,gustavo ast uiverse,gustavo ast frontend developer,frontend developer,gustavo ast" />
+  <meta name="description" content="Gustavo Ast | Portfolio, Visite e saiba mais sobre mim e sobre meus conhecimentos e projetos." />
+  <meta name="keywords" content="gustavo ast,gustavo ast portfolio,Gustavo Ast Portfolio,gustavo ast site,Gustavo Ast,gustavo ast me,gustavo ast web,gustavo ast github,uiverse,gustavo ast uiverse,gustavo ast frontend developer,frontend developer,gustavo ast" />
   <meta name="author" content="Gustavo Ast" />
   <meta property="og:image" content="" />
   <meta property="og:title" content="Gustavo Ast | Portfolio" />
-  <meta property="og:description"
-    content="Hi! My name is Gustavo. I'm a web developer and digital visual artist. Visit and know about me & my projects/designs. I value simple content structure, clean design patterns, and thoughtful interactions." />
+  <meta property="og:description" content="Olá!  Eu me chamo Gustavo. Eu sou um Desenvolvedor Full Stack. Visite e saiba mais sobre mim e sobre meus conhecimentos e projetos." />
 
   <meta property="og:url" content="" />
   <meta property="og:site_name" content="Gustavo Ast Portfolio" />
@@ -24,16 +21,13 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Gustavo Ast | Portfolio" />
   <meta name="twitter:description"
-  content="Hi! My name is Gustavo. I'm a web developer and digital visual artist. Visit and know about me & my projects/designs. I value simple content structure, clean design patterns, and thoughtful interactions." />
+  content="Olá!  Eu me chamo Gustavo. Eu sou um Desenvolvedor Full Stack. Visite e saiba mais sobre mim e sobre meus conhecimentos e projetos." />
   <title>Gustavo Ast | Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="src/png/main-favicon.png" />
-  <!-- aos cdn -->
+  <link rel="icon" type="image/x-icon" href="src/img/content/logo.png" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <!-- stylesheet -->
   <link rel="stylesheet" href="style.css" />
-  <!-- google fonts-->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 <body class="body">
   <audio loop="" id="audioPlayer" style="display: none">
@@ -43,13 +37,10 @@
   <noscript>Allow Javascript</noscript>
 
   <header>
-    <!-- <div class="cursor-inner" id="cursor-inner"></div>
-    <div class="cursor-outer" id="cursor-outer"></div> -->
-
     <div class="navbar" id="navbar">
       <div class="navbar-tabs" id="navbar-tabs">
         <ul class="navbar-tabs-ul">
-          <li class="home activeThistab" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
+          <li class="home" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
             <a href="#home" tabindex="0" aria-label="Home menu button">
               &#60;/Home&#62;
             </a>
@@ -72,17 +63,37 @@
               &#60;/Experiências&#62;
             </a>
           </li>
+          <li>
+            <div class="flex">
+              <input type="checkbox" id="switchforvisualmode" onclick="visualmode('web')" />
+              <label for="switchforvisualmode" id="labelforvisualmode" tabindex="0"
+                  aria-label="switch appearance">
+              </label>
+              <input type="checkbox" id="switchforsound" onclick="playpause()" />
+              <label for="switchforsound" id="labelforsound" tabindex="0" aria-label="switch sound"
+                  class="needtobeinvert">
+              </label>
+            </div>
+          </li>
         </ul>
       </div>
-      <!-- navbar tabs ends -->
     </div>
   </header>
-  <!-- header ends here -->
 
   <main>
-    <!-- hamburger -->
+
     <div class="hamburger" id="hamburger" data-aos="fade">
       <div class="hamburgerbase">
+        <div class="flex">
+          <input type="checkbox" id="switchforvisualmodeMobile" onclick="visualmode('mobile')" />
+          <label for="switchforvisualmodeMobile" id="labelforvisualmodeMobile" tabindex="0"
+              aria-label="switch appearance">
+          </label>
+          <input type="checkbox" id="switchforsound" onclick="playpause()" />
+          <label for="switchforsound" id="labelforsound" tabindex="0" aria-label="switch sound"
+              class="needtobeinvert">
+          </label>
+        </div>
         <button id="hamburger-button" onclick="hamburgerMenu()" tabindex="0" aria-label="Menu Button">
           <span class="burger-bar" id="burger-bar1"></span>
           <span class="burger-bar" id="burger-bar2"></span>
@@ -90,10 +101,10 @@
         </button>
       </div>
     </div>
-    <!-- hamburger -->
+
     <div class="mobiletogglemenu" id="mobiletogglemenu">
       <ul class="mobile-navbar-tabs-ul" id="mobile-ul">
-        <li id="home-mobile-tab" class="mobile-navbar-tabs-li home activeThismobiletab" onclick="hidemenubyli()">
+        <li id="home-mobile-tab" class="mobile-navbar-tabs-li home" onclick="hidemenubyli()">
           <a href="#home" tabindex="0" aria-label="Home menu button">
             &#60;/Home&#62;
           </a>
@@ -116,10 +127,8 @@
         </li>
       </ul>
     </div>
-    <!-- mobile toggle menu ends -->
 
     <section class="landing-page-container" id="home">
-      <div class="blob"></div>
 
       <div class="text-content">
         <article id="hello-friend" data-aos="fade-up" data-aos-delay="0">
@@ -198,41 +207,16 @@
           </div>
         </article>
         <p id="info-para" data-aos="fade-up" data-aos-delay="600">
-          Eu desenvolvo software a mais de 6 anos, ao longo dessa trajetoria adquiri muito conhecimento e desenvolvi proficiência em diversas tecnologias.<br />
-          <br />
-          Já possuo formação na área de tecnologia e tenho participação em diversos projetos tanto da iniciativa pública quanto a privada.
+          Sempre me interessei por tecnologia e desde pequeno eu tive vontade de aprender como as coisas são feitas, 
+          e essa vontade de aprender segue até os dias de hoje.   
+        <br />
+        <br />
+          A curiosidade é para mim a maior motivação para o aprendizado, pois quando nos interessamos 
+          e buscamos conhecimento por conta própria nada nos impede de adquirí-lo.
         </p>
-        <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="800">
-          <a href="mailto:gustavoastmariano@gmail.com" tabindex="-1">
-            <button class="letsTalkBtn">
-              <p class="letsTalkBtn-text">Let's Talk!</p>
-              <span class="letsTalkBtn-BG"></span>
-            </button></a>
-          <div class="setting-container" id="setting-container">
-            <input type="checkbox" id="switchforsetting" onclick="settingtoggle()" />
-
-            <label for="switchforsetting" class="needtobeinvert" id="labelforsetting" tabindex="0"
-              aria-label="settings for sound and appearance"></label>
-
-            <div class="visualmodetogglebuttoncontainer" id="visualmodetogglebuttoncontainer">
-              <input type="checkbox" id="switchforvisualmode" onclick="visualmode()" />
-              <label for="switchforvisualmode" id="labelforvisualmode" tabindex="0"
-                aria-label="switch appearance"></label>
-            </div>
-
-            <div class="soundtogglebuttoncontainer" id="soundtogglebuttoncontainer">
-              <input type="checkbox" id="switchforsound" onclick="playpause()" />
-              <label for="switchforsound" id="labelforsound" tabindex="0" aria-label="switch sound"
-                class="needtobeinvert"></label>
-            </div>
-          </div>
-          <!-- setting div ends -->
-        </div>
-        <!-- contact-btn-div -->
       </div>
      
     </section>
-    <!-- landing page ends here -->
     <section class="about-section-container" id="about" data-aos="fade-up">
       <div class="about-section">
         <div class="section-heading">
@@ -245,35 +229,36 @@
         <div class="info-dp-section">
           <div class="about-info">
             <p tabindex="0">
-              Oi! Meu nome é Gustavo. Eu sou um Desenvolvedor <span id="typed"></span>.</p>
-            <br />
+              Oi! Meu nome é Gustavo.
+            </p>
             <p tabindex="0">
-              Texto!
+              Eu sou um Desenvolvedor <span id="typed"></span>.
             </p>
             <br />
             <p tabindex="0">
-              Texto.
+              Eu desenvolvo software a mais de 6 anos, ao longo dessa trajetoria adquiri muito conhecimento e desenvolvi proficiência em diversas tecnologias.<br />
             </p>
-             <!-- Resume button -->
-      <button class="resume-btn" id="resume-btn" onclick="openURL()">
-        <div class="sign">
-          <svg viewBox="0 0 640 512">
-            <path
-              d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
-          </svg>
-        </div>
+            <br />
+            <p tabindex="0">
+              Já possuo formação na área de tecnologia e tenho participação em diversos projetos tanto da iniciativa pública quanto a privada.
+            </p>
 
-        <div class="text">Resume</div>
-      </button>
+            <button class="resume-btn" id="resume-btn" onclick="openURL()">
+              <div class="sign">
+                <svg viewBox="0 0 640 512">
+                  <path
+                    d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
+                </svg>
+              </div>
+              <div class="text">Currículo</div>
+            </button>
           </div>
-
           <div class="dp" data-aos="fade-up">
             <img src="src/img/content/foto.png" alt="Gustavo Ast" tabindex="0" aria-label="image of Gustavo" />
           </div>
         </div>
       </div>
     </section>
-    <!-- about section ends  -->
 
     <section class="skills-section-container" id="skills">
       <div class="skills-section">
@@ -283,118 +268,454 @@
           </h2>
           <p class="sectionHeadingP"></p>
         </div>
+          <div class="project-boxes-div">
+              <div class="project-box project-box2" id="project-box2">
+                <div class="swiper mySwiperSkills" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
+                  <div id="parallaxbg" class="parallax-bg" style="background-image: url(src/img/theme/parallax-dark.jpg);"
+                    data-swiper-parallax="-23%"></div>
+  
+                  <div class="swiper-wrapper wrapper-size">
+  
+                    <div class="swiper-slide swiper-content">
+                      <article id="spotify-text" >
+                        <p class="playlist-title">Front-End</p>
+                      </article>
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/htmllogo.png" alt="HTML">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-95" data-swiper-parallax="-300" >
+                            <p>
+                              HTML
+                              <span class="tooltip2">95%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/csslogo.png" alt="CSS">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-90" data-swiper-parallax="-300" >
+                            <p>
+                              CSS
+                              <span class="tooltip2">90%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/jslogo.png" alt="Javascript">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-90" data-swiper-parallax="-300" >
+                            <p>
+                              Javascript
+                              <span class="tooltip2">90%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/vuejs-logo.png" alt="VueJS">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-85" data-swiper-parallax="-300" >
+                            <p>
+                              VueJs
+                              <span class="tooltip2">85%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/bootstraplogo.png" alt="Bootstrap">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-80" data-swiper-parallax="-300" >
+                            <p>
+                              Bootstrap
+                              <span class="tooltip2">80%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/nodejs-logo.png" alt="NodeJS">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-75" data-swiper-parallax="-300" >
+                            <p>
+                              NodeJs
+                              <span class="tooltip2">75%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-wrapper">
+                      </div>
 
-        <div class="frontend-dev-section">
-          <h3 class="frontend-dev-heading" data-aos="fade-up" tabindex="0"
-            aria-label="As a frontend a developer these are the skills i have">
-            Tecnologias
-          </h3>
-          <ul class="tech-stack-wrapper">
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/htmllogo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">HTML</span>
-            </li>
+                    </div>
+  
+                    <div class="swiper-slide swiper-content">
+                      <article id="spotify-text" >
+                        <p class="playlist-title">Back-End</p>
+                      </article>
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/java-logo.png" alt="Java">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-90" data-swiper-parallax="-300" >
+                            <p>
+                              Java
+                              <span class="tooltip2">90%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/PHP-logo.png" alt="PHP">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-85" data-swiper-parallax="-300" >
+                            <p>
+                              PHP
+                              <span class="tooltip2">85%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/laravel-logo.png" alt="Laravel">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-80" data-swiper-parallax="-300" >
+                            <p>
+                              Laravel
+                              <span class="tooltip2">80%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/clogo.png" alt="C">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-95" data-swiper-parallax="-300" >
+                            <p>
+                              C
+                              <span class="tooltip2">95%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-wrapper">
+                      </div>
+                      <div class="item-wrapper">
+                      </div>
+                      <div class="item-wrapper">
+                      </div>
+                  
+                    </div>
+                    
+                    <div class="swiper-slide swiper-content">
+                      <article id="spotify-text" >
+                        <p class="playlist-title">Databases</p>
+                      </article>
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/db2-logo.png" alt="IBMDB2">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-95" data-swiper-parallax="-300" >
+                            <p>
+                              IBMDB2
+                              <span class="tooltip2">95%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/mysql-logo.png" alt="MySql">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-85" data-swiper-parallax="-300" >
+                            <p>
+                              MySql
+                              <span class="tooltip2">85%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/dbeaver-logo.png" alt="Dbeaver">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-80" data-swiper-parallax="-300" >
+                            <p>
+                              Dbeaver
+                              <span class="tooltip2">80%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/s3-logo.png" alt="S3">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-85" data-swiper-parallax="-300" >
+                            <p>
+                              S3
+                              <span class="tooltip2">85%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/rds-logo.png" alt="RDS">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-80" data-swiper-parallax="-300" >
+                            <p>
+                              RDS
+                              <span class="tooltip2">80%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-wrapper">
+                      </div>
+                      <div class="item-wrapper">
+                      </div>
+  
+                  
+                    </div>
 
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/csslogo.png" alt="css skill" class="tech-stack-logo" />
-              <span class="tooltip">CSS</span>
-            </li>
+                    <div class="swiper-slide swiper-content">
+                      <article id="spotify-text" >
+                        <p class="playlist-title">Versionamento</p>
+                      </article>
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/gitlogo.png" alt="GIT">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-95" data-swiper-parallax="-300" >
+                            <p>
+                              GIT
+                              <span class="tooltip2">95%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/bitbucket-logo.png" alt="Bitbucket">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-90" data-swiper-parallax="-300" >
+                            <p>
+                              Bitbucket
+                              <span class="tooltip2">90%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/githublogo.png" alt="Github">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-90" data-swiper-parallax="-300" >
+                            <p>
+                              Github
+                              <span class="tooltip2">90%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/gitlab-logo.png" alt="GitLab">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-85" data-swiper-parallax="-300" >
+                            <p>
+                              GitLab
+                              <span class="tooltip2">85%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-wrapper">
+                      </div>
+                      <div class="item-wrapper">
+                      </div>
+                      <div class="item-wrapper">
+                      </div>
+  
+                  
+                    </div>
 
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/jslogo.png" alt="js skill" class="tech-stack-logo" />
-              <span class="tooltip">JS</span>
-            </li>
+                    <div class="swiper-slide swiper-content">
+                      <article id="spotify-text" >
+                        <p class="playlist-title">Outros</p>
+                      </article>
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/vscode-logo.png" alt="VsCode">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-95" data-swiper-parallax="-300" >
+                            <p>
+                              VsCode
+                              <span class="tooltip2">95%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/microsoft-teams-logo.png" alt="Teams">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-90" data-swiper-parallax="-300" >
+                            <p>
+                              Teams
+                              <span class="tooltip2">90%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/docker-logo.png" alt="Docker">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-70" data-swiper-parallax="-300" >
+                            <p>
+                              Docker
+                              <span class="tooltip2">70%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/netbeans-logo.png" alt="Netbeans">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-85" data-swiper-parallax="-300" >
+                            <p>
+                              Netbeans
+                              <span class="tooltip2">85%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-wrapper">
+                        <div class="icon-size">
+                          <img src="src/img/logos/intelliJ-logo.png" alt="IntelliJ">
+                        </div>
+                        <div class="gray-bar" data-swiper-parallax="-300">
+  
+                          <div class="gradient-bar w-80" data-swiper-parallax="-300" >
+                            <p>
+                              IntelliJ
+                              <span class="tooltip2">80%</span>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-wrapper">
+                      </div>
+                      <div class="item-wrapper">
+                      </div>
+                    
+                    </div>
+  
+                  </div>
+                  <div class="swiper-button-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor"
+                      class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671" />
+                    </svg>
+                  </div>
+                  <div class="swiper-button-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor"
+                      class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd"
+                        d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223" />
+                    </svg>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="autoplay-progress">
+                    <svg viewBox="0 0 48 48">
+                      <circle cx="24" cy="24" r="20"></circle>
+                    </svg>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/nodejs-logo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">NODEJS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/vuejs-logo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">VUE</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/bootstraplogo.png" alt="bootstrap skill" class="tech-stack-logo" />
-              <span class="tooltip">BOOTSTRAP</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/java-logo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">JAVA</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/PHP-logo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">PHP</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/clogo.png" alt="c language skill" class="tech-stack-logo" />
-              <span class="tooltip">C</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/laravel-logo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">LARAVEL</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/dbeaver-logo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">DBEAVER</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/mysql-logo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">MYSQL</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/db2-logo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">IBMDB2</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/vscode-logo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">VSCODE</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/microsoft-teams-logo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">MICROSOFT TEAMS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/docker-logo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">DOCKER</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/githublogo.png" alt="github skill" class="tech-stack-logo needtobeinvert" />
-              <span class="tooltip">GITHUB</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/gitlab-logo.png" alt="github skill" class="tech-stack-logo needtobeinvert" />
-              <span class="tooltip">GITLAB</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/bitbucket-logo.png" alt="github skill" class="tech-stack-logo needtobeinvert" />
-              <span class="tooltip">BITBUCKET</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/img/logos/gitlogo.png" alt="git skill" class="tech-stack-logo" />
-              <span class="tooltip">GIT</span>
-            </li>
-
-          </ul>
-        </div>
+          </div>
       </div>
     </section>
-    <!-- skills section ends -->
+
     <section class="projects-section-container" id="projects">
       <div class="projects-section-div">
         <div class="section-heading" data-aos="fade-up">
@@ -403,43 +724,236 @@
           </h2>
           <p class="sectionHeadingP"></p>
         </div>
-          <!-- ---------------------- -->
+        <div class="project-boxes-div">
+          <div data-aos="fade-up" class="project-box-wrapper">
+            <div class="project-box project-box2" id="project-box2">
 
-          <div class="project-box-wrapper" data-aos="fade-up">
-            <div class="project-box project-box1" id="project-box1">
-              <div class="info-div">
-                <img src="src/img/logos/java-logo.png" alt="Nome do Projeto" class="faviconforProject" />
-                <article class="ProjectHeading">Nome do Projeto</article>
-                <p class="ProjectDescription">
-                  Descrição do Projeto.
-                </p>
-                <div class="project-buttons">
-                  <a href="" target="_blank" class="github-redirect"
-                    aria-label="Veja no GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
-                  </a>
-                  <a href="" target="_blank" class="cta"
-                    aria-label="Visite o Site">
-                    <span>Demonstração</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
+              <div class="swiper mySwiperProjects">
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide ssflex">
+
+                    <div class="info-div">
+                      <article class="ProjectHeading">SGCEX
+                        <img src="src/img/projects/logo/sgcex-logo.png"
+                          alt="pexelicon website favicon" class="faviconforProject" />
+                      </article>
+                      <p class="ProjectDescription">
+                        Primeiro projeto em que participei, nele tive a oportunidade de trabalhar em na maioria das etapas do desenvolvimento de software, 
+                        análise, desenvolvimento e implantação.
+                      </p>
+                      <article class="ProjectHeading">Tecnologias</article>
+                      <div class="project-icons">
+                        <a class="icons">
+                          <img src="src/img/logos/htmllogo.png" alt="" />
+                          <span class="tooltip">HTML</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/csslogo.png" alt="" />
+                          <span class="tooltip">CSS</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/java-logo.png" alt="" />
+                          <span class="tooltip">JAVA</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/jslogo.png" alt="" />
+                          <span class="tooltip">JAVASCRIPT</span>
+                        </a>
+                        <a class="icons">
+                          <span class="tooltip">IBMDB2</span>
+                          <img src="src/img/logos/db2-logo.png" alt="" />
+                        </a>
+                        <a class="icons">
+                          <span class="tooltip">GitLab</span>
+                          <img src="src/img/logos/gitlab-logo.png" alt="" />
+                        </a>
+                        <a class="icons">
+                          <span class="tooltip">Netbeans</span>
+                          <img src="src/img/logos/netbeans-logo.png" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="image-div">
+                      <img src="src/img/projects/preview/sgcex.png" alt="SGCEX website preview image" />
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide ssflex">
+                    <div class="info-div">
+                      <article class="ProjectHeading">PRISMA
+                        <img src="src/img/projects/logo/prisma-logo.png"
+                          alt="pexelicon website favicon" class="faviconforProject" />
+                      </article>
+                      <p class="ProjectDescription">
+                        Substituto do sistema acadêmico da Universidade Estadual de Maringá, infelizmente meu contrato expirou antes de finaliza-lo.
+                      </p>
+                      <article class="ProjectHeading">Tecnologias</article>
+                      <div class="project-icons">
+                        <a class="icons">
+                          <img src="src/img/logos/htmllogo.png" alt="" />
+                          <span class="tooltip">HTML</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/csslogo.png" alt="" />
+                          <span class="tooltip">CSS</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/java-logo.png" alt="" />
+                          <span class="tooltip">JAVA</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/jslogo.png" alt="" />
+                          <span class="tooltip">JAVASCRIPT</span>
+                        </a>
+                        <a class="icons">
+                          <span class="tooltip">IBMDB2</span>
+                          <img src="src/img/logos/db2-logo.png" alt="" />
+                        </a>
+                        <a class="icons">
+                          <span class="tooltip">GitLab</span>
+                          <img src="src/img/logos/gitlab-logo.png" alt="" />
+                        </a>
+                        <a class="icons">
+                          <span class="tooltip">Netbeans</span>
+                          <img src="src/img/logos/netbeans-logo.png" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="image-div">
+                      <img src="src/img/projects/preview/prisma.png" alt="Prisma website preview image" />
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide ssflex">
+                    <div class="info-div">
+                      <article class="ProjectHeading">NewMusicBrasil
+                        <img src="src/img/projects/logo/new-music-logo.png"
+                          alt="pexelicon website favicon" class="faviconforProject" />
+                      </article>
+                      <p class="ProjectDescription">
+                        Projeto de captação de informações e metadados de obras musicais para artistas da New Music Brasil; 
+                      </p>
+                      <article class="ProjectHeading">Tecnologias</article>
+                      <div class="project-icons">
+                        <a class="icons">
+                          <img src="src/img/logos/vuejs-logo.png" alt="" />
+                          <span class="tooltip">VUE</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/nodejs-logo.png" alt="" />
+                          <span class="tooltip">NODEJS</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/PHP-logo.png" alt="" />
+                          <span class="tooltip">PHP</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/laravel-logo.png" alt="" />
+                          <span class="tooltip">LARAVEL</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/jslogo.png" alt="" />
+                          <span class="tooltip">JS</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/docker-logo.png" alt="" />
+                          <span class="tooltip">DOCKER</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/mysql-logo.png" alt="" />
+                          <span class="tooltip">MYSQL</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/vscode-logo.png" alt="" />
+                          <span class="tooltip">VSCODE</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="image-div">
+                      <img src="src/img/projects/preview/new-music.png" alt="NewMusicBrasil website preview image" />
+                    </div>
+                  </div>
+                  
+                  <div class="swiper-slide ssflex">
+                    <div class="info-div">
+                      <article class="ProjectHeading">ComporPlay
+                        <img src="src/img/projects/logo/comporplay-logo.png"
+                          alt="pexelicon website favicon" class="faviconforProject" />
+                      </article>
+                      <p class="ProjectDescription">
+                        Projeto de vitrine e comercialização das obras musicais dos artistas da New Music Brasil; 
+                      </p>
+                      <article class="ProjectHeading">Tecnologias</article>
+                      <div class="project-icons">
+                        <a class="icons">
+                          <img src="src/img/logos/vuejs-logo.png" alt="" />
+                          <span class="tooltip">VUE</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/nodejs-logo.png" alt="" />
+                          <span class="tooltip">NODEJS</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/PHP-logo.png" alt="" />
+                          <span class="tooltip">PHP</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/laravel-logo.png" alt="" />
+                          <span class="tooltip">LARAVEL</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/jslogo.png" alt="" />
+                          <span class="tooltip">JS</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/docker-logo.png" alt="" />
+                          <span class="tooltip">DOCKER</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/mysql-logo.png" alt="" />
+                          <span class="tooltip">MYSQL</span>
+                        </a>
+                        <a class="icons">
+                          <img src="src/img/logos/vscode-logo.png" alt="" />
+                          <span class="tooltip">VSCODE</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="image-div">
+                      <img src="src/img/projects/preview/comporplay.png" alt="NewMusicBrasil website preview image" />
+                    </div>
+                  </div>
+
                 </div>
-              </div>
-              <div class="image-div">
-                <img src="src/img/logos/java-logo.png" alt="Preview do Projeto" />
+                <div class="swiper-button-next">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor"
+                    class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671" />
+                  </svg>
+                </div>
+                <div class="swiper-button-prev">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor"
+                    class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223" />
+                  </svg>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="autoplay-progress">
+                  <svg viewBox="0 0 48 48">
+                    <circle cx="24" cy="24" r="20"></circle>
+                  </svg>
+                  <span></span>
+                </div>
               </div>
             </div>
           </div>
-
-          <!-- ---------------------- -->
         </div>
       </div>
     </section>
   </main>
-  <!-- main ends here -->
 
   <footer id="footer">
     <button class="fas" id="backtotopbutton" onclick="scrolltoTopfunction()">
@@ -480,17 +994,6 @@
               </svg></a>
           </div>
         </div>
-        <!-- <div class="footer-avatar-container">
-          <img src="src/png/nav-avatar.png" alt="animation-head" class="footer-avatar-img" id="footer-wala-avatar"/>
-          <div class="footer-avatar-face">
-            <div class="footer-avatar-eye footer-left-eye">
-              <div class="footer-pupil"></div>
-            </div>
-            <div class="footer-avatar-eye footer-right-eye">
-              <div class="footer-pupil"></div>
-            </div>
-          </div>
-        </div> -->
         <div class="footer-bottom">
           <article>
             Criado por Gustavo Ast
@@ -500,12 +1003,13 @@
       </div>
     </div>
   </footer>
-  <!-- footer ends here -->
 
   <script src="main.js"></script>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <script>
     AOS.init();
     new Typed("#typed", {
@@ -540,9 +1044,6 @@
       cursorInner.style.left = `${posX}px`;
       cursorInner.style.top = `${posY}px`;
 
-      // cursorOuter.style.left = `${posX}px`;
-      // cursorOuter.style.top = `${posY}px`;
-
       cursorOuter.animate(
         {
           left: `${posX}px`,
@@ -561,6 +1062,51 @@
           cursorOuter.classList.remove("hover");
         });
       });
+    });
+  </script>
+  <script>
+    const progressCircle = document.querySelector(".autoplay-progress svg");
+    const progressContent = document.querySelector(".autoplay-progress span");
+    var slidesPerView = 1;
+
+    var swiper = new Swiper(".mySwiperSkills", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      parallax: true,
+      autoplay: {
+        delay: 4500,
+        disableOnInteraction: true
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    var swiper1 = new Swiper(".mySwiperProjects", {
+      effect: "cube",
+      cubeEffect: {
+        shadow: false,
+        slideShadows: false
+      },
+      slidesPerView: 1,
+      spaceBetween: 0,
+      autoplay: {
+        delay: 6500,
+        disableOnInteraction: true
+      },
+      loop: false,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     });
   </script>
 </body>

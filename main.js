@@ -20,12 +20,27 @@ window.addEventListener("load", function () {
   (loader.style.display = "none"),
     document.querySelector(".hey").classList.add("popup");
 });
-function visualmode() {
+function visualmode(val) {
+  //update the checkboxes values to have the same value
+  if (val == 'mobile') {
+      document.getElementById("switchforvisualmode").checked = 
+      document.getElementById("switchforvisualmodeMobile").checked;
+  } else {
+      document.getElementById("switchforvisualmodeMobile").checked = 
+      document.getElementById("switchforvisualmode").checked;
+  }    
+  if (document.getElementById("switchforvisualmode").checked) {
+    document.getElementById("parallaxbg").style.backgroundImage = "url(src/img/theme/parallax-light.jpg)";
+  } else {
+    document.getElementById("parallaxbg").style.backgroundImage = "url(src/img/theme/parallax-dark.jpg)";
+  }
+  //toggle light and dark mode
   document.body.classList.toggle("light-mode"),
-    document.querySelectorAll(".needtobeinvert").forEach(function (e) {
-      e.classList.toggle("invertapplied");
-    });
+  document.querySelectorAll(".needtobeinvert").forEach(function (e) {
+    e.classList.toggle("invertapplied");
+  });
 }
+
 let emptyArea = document.getElementById("emptyarea"),
   mobileTogglemenu = document.getElementById("mobiletogglemenu");
 function hamburgerMenu() {
