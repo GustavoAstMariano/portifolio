@@ -1419,9 +1419,6 @@ footer {
   color: #000;
 }
 @media screen and (max-width: 1920px) {
-  .projects-section-div {
-    width: 80%;
-  }
   html {
     font-size: 60%;
   }
@@ -1430,6 +1427,7 @@ footer {
   }
 }
 @media screen and (max-width: 1400px) {
+  .skills-section,
   .projects-section-div {
     width: 80%;
   }
