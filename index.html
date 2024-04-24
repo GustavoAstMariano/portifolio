@@ -33,35 +33,31 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 <body class="body">
-  <audio loop="" id="audioPlayer" style="display: none">
-    <source src="src/audio/vegas.mp3" type="audio/mp3" />
-  </audio>
   <div id="preloader"></div>
   <noscript>Allow Javascript</noscript>
-
   <header>
     <div class="navbar" id="navbar">
       <div class="navbar-tabs" id="navbar-tabs">
         <ul class="navbar-tabs-ul">
-          <li class="home" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
+          <li class="home" class="navbar-tabs-li">
             <a href="#home" tabindex="0" aria-label="Home menu button">
               &#60;/Home&#62;
             </a>
           </li>
 
-          <li class="about" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="300">
+          <li class="about" class="navbar-tabs-li">
             <a href="#about" aria-label="about menu button">
               &#60;/Sobre&#62;
             </a>
           </li>
 
-          <li class="skills" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
+          <li class="skills" class="navbar-tabs-li">
             <a href="#skills" aria-label="skills menu button">
               &#60;/Habilidades&#62;
             </a>
           </li>
 
-          <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
+          <li class="projects" class="navbar-tabs-li">
             <a href="#projects" aria-label="projects menu button">
               &#60;/Experiências&#62;
             </a>
@@ -72,10 +68,6 @@
               <label for="switchforvisualmode" id="labelforvisualmode" tabindex="0"
                   aria-label="switch appearance">
               </label>
-              <!-- <input type="checkbox" id="switchforsound" onclick="playpause()" />
-              <label for="switchforsound" id="labelforsound" tabindex="0" aria-label="switch sound"
-                  class="needtobeinvert">
-              </label> -->
             </div>
           </li>
         </ul>
@@ -85,17 +77,13 @@
 
   <main>
 
-    <div class="hamburger" id="hamburger" data-aos="fade">
+    <div class="hamburger" id="hamburger">
       <div class="hamburgerbase">
         <div class="flex">
           <input type="checkbox" id="switchforvisualmodeMobile" onclick="visualmode('mobile')" />
           <label for="switchforvisualmodeMobile" id="labelforvisualmodeMobile" tabindex="0"
               aria-label="switch appearance">
           </label>
-          <!-- <input type="checkbox" id="switchforsound" onclick="playpause()" />
-          <label for="switchforsound" id="labelforsound" tabindex="0" aria-label="switch sound"
-              class="needtobeinvert">
-          </label> -->
         </div>
         <button id="hamburger-button" onclick="hamburgerMenu()" tabindex="0" aria-label="Menu Button">
           <span class="burger-bar" id="burger-bar1"></span>
@@ -134,7 +122,7 @@
     <section class="landing-page-container" id="home">
 
       <div class="text-content">
-        <article id="hello-friend" data-aos="fade-up" data-aos-delay="0">
+        <article id="hello-friend">
           <p class="jello">O</p>
           <p class="jello">l</p>
           <p class="jello">á</p>
@@ -152,7 +140,7 @@
           <p class="jello">m</p>
           <p class="jello">o</p>
         </article>
-        <article id="name" data-aos="fade-up" data-aos-delay="200">
+        <article id="name">
           <p class="jello">G</p>
           <p class="jello">u</p>
           <p class="jello">s</p>
@@ -174,7 +162,7 @@
           <p class="jello">o</p>
         </article>
 
-        <article id="work" data-aos="fade-up" data-aos-delay="400">
+        <article id="work" >
           <div>
             <p class="jello">S</p>
             <p class="jello">o</p>
@@ -209,7 +197,7 @@
             <p class="jello">k</p>
           </div>
         </article>
-        <p id="info-para" data-aos="fade-up" data-aos-delay="600">
+        <p id="info-para">
           Sempre me interessei por tecnologia e desde pequeno eu tive vontade de aprender como as coisas são feitas, 
           e essa vontade de aprender segue até os dias de hoje.   
         <br />
@@ -220,7 +208,7 @@
       </div>
      
     </section>
-    <section class="about-section-container" id="about" data-aos="fade-up">
+    <section class="about-section-container" id="about" data-aos="fade-up" data-aos-delay="100">
       <div class="about-section">
         <div class="section-heading">
           <h2 class="section-heading-article" tabindex="0" aria-label="About me heading">
@@ -230,23 +218,23 @@
         </div>
 
         <div class="info-dp-section">
-          <div class="about-info">
-            <p tabindex="0">
+          <div class="about-info" data-aos="fade-up" data-aos-delay="100">
+            <p tabindex="0" data-aos="fade-up" data-aos-delay="200">
               Oi! Meu nome é Gustavo.
             </p>
-            <p tabindex="0">
+            <p tabindex="0" data-aos="fade-up" data-aos-delay="300">
               Eu sou um Desenvolvedor <span id="typed"></span>.
             </p>
             <br />
-            <p tabindex="0">
+            <p tabindex="0" data-aos="fade-up" data-aos-delay="400">
               Eu desenvolvo software a mais de 6 anos, ao longo dessa trajetoria adquiri muito conhecimento e desenvolvi proficiência em diversas tecnologias.<br />
             </p>
             <br />
-            <p tabindex="0">
+            <p tabindex="0" data-aos="fade-up" data-aos-delay="500">
               Já possuo formação na área de tecnologia e tenho participação em diversos projetos tanto da iniciativa pública quanto a privada.
             </p>
 
-            <button class="resume-btn" id="resume-btn" onclick="openURL()">
+            <button class="resume-btn" id="resume-btn" onclick="openURL()" data-aos="fade-up" data-aos-delay="600">
               <div class="sign">
                 <svg viewBox="0 0 640 512">
                   <path
@@ -256,7 +244,7 @@
               <div class="text">Currículo</div>
             </button>
           </div>
-          <div class="dp" data-aos="fade-up">
+          <div class="dp" data-aos="fade-up" data-aos="fade-up" data-aos-delay="700">
             <img src="src/img/content/foto.png" alt="Gustavo Ast" tabindex="0" aria-label="image of Gustavo" />
           </div>
         </div>
@@ -271,7 +259,7 @@
           </h2>
           <p class="sectionHeadingP"></p>
         </div>
-          <div class="project-boxes-div">
+          <div class="project-boxes-div" data-aos="fade-up" data-aos-delay="100">
               <div class="project-box project-box2" id="project-box2">
                 <div class="swiper mySwiperSkills">
                   <div id="parallaxbg" class="parallax-bg" style="background-image: url(src/img/theme/parallax-dark.jpg);"
@@ -721,7 +709,7 @@
           </h2>
           <p class="sectionHeadingP"></p>
         </div>
-        <div class="project-boxes-div">
+        <div class="project-boxes-div" data-aos="fade-up" data-aos-delay="100">
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
 
@@ -1023,38 +1011,6 @@
     }
   </script>
 
-  <script>
-    const cursorInner = document.getElementById("cursor-inner");
-    const cursorOuter = document.getElementById("cursor-outer");
-    const links = document.querySelectorAll("a,label,button");
-
-    document.addEventListener("mousemove", function (e) {
-      const posX = e.clientX;
-      const posY = e.clientY;
-
-      cursorInner.style.left = `${posX}px`;
-      cursorInner.style.top = `${posY}px`;
-
-      cursorOuter.animate(
-        {
-          left: `${posX}px`,
-          top: `${posY}px`,
-        },
-        { duration: 500, fill: "forwards" }
-      );
-
-      links.forEach((link) => {
-        link.addEventListener("mouseenter", () => {
-          cursorInner.classList.add("hover");
-          cursorOuter.classList.add("hover");
-        });
-        link.addEventListener("mouseleave", () => {
-          cursorInner.classList.remove("hover");
-          cursorOuter.classList.remove("hover");
-        });
-      });
-    });
-  </script>
   <script>
     const progressCircle = document.querySelector(".autoplay-progress svg");
     const progressContent = document.querySelector(".autoplay-progress span");

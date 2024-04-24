@@ -1,24 +1,7 @@
-var audio = document.getElementById("audioPlayer"),
-  loader = document.getElementById("preloader");
-function settingtoggle() {
-  document
-    .getElementById("setting-container")
-    .classList.toggle("settingactivate"),
-    document
-      .getElementById("visualmodetogglebuttoncontainer")
-      .classList.toggle("visualmodeshow"),
-    document
-      .getElementById("soundtogglebuttoncontainer")
-      .classList.toggle("soundmodeshow");
-}
-function playpause() {
-  !1 == document.getElementById("switchforsound").checked
-    ? audio.pause()
-    : audio.play();
-}
+var loader = document.getElementById("preloader");
+
 window.addEventListener("load", function () {
-  (loader.style.display = "none"),
-    document.querySelector(".hey").classList.add("popup");
+  (loader.style.display = "none");
 });
 function visualmode(val) {
   //update the checkboxes values to have the same value
@@ -112,33 +95,3 @@ function scrolltoTopfunction() {
     },
     !1
   );
-let Pupils = document.getElementsByClassName("footer-pupil"),
-  pupilsArr = Array.from(Pupils),
-  pupilStartPoint = -10,
-  pupilRangeX = 20,
-  pupilRangeY = 15,
-  mouseXStartPoint = 0,
-  mouseXEndPoint = window.innerWidth,
-  currentXPosition = 0,
-  fracXValue = 0,
-  mouseYEndPoint = window.innerHeight,
-  currentYPosition = 0,
-  fracYValue = 0,
-  mouseXRange = mouseXEndPoint - mouseXStartPoint;
-const mouseMove = (e) => {
-    (fracXValue =
-      (currentXPosition = e.clientX - mouseXStartPoint) / mouseXRange),
-      (fracYValue = (currentYPosition = e.clientY) / mouseYEndPoint);
-    let t = pupilStartPoint + fracXValue * pupilRangeX,
-      o = pupilStartPoint + fracYValue * pupilRangeY;
-    pupilsArr.forEach((e) => {
-      e.style.transform = `translate(${t}px, ${o}px)`;
-    });
-  },
-  windowResize = (e) => {
-    (mouseXEndPoint = window.innerWidth),
-      (mouseYEndPoint = window.innerHeight),
-      (mouseXRange = mouseXEndPoint - mouseXStartPoint);
-  };
-window.addEventListener("mousemove", mouseMove),
-  window.addEventListener("resize", windowResize);
