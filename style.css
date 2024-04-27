@@ -76,13 +76,15 @@ html {
 }
 :root {
   cursor: default;
+  --color-jello: #8e03ff;
   --color-green: #169169;
   --color-red: #fe0000;
+  --color-yellow: #ffe600;
   --color-white: #fff;
   --color-black: #000;
-  --color-dark-mode: #11111b;
-  --color-theme-reverse: #ece7e1;
-  --color-light-mode: #ece7e1;
+  --color-dark-mode: #000030;
+  --color-theme-reverse: #9fdcff;
+  --color-light-mode: #9fdcff;
   --color-ddd-color: #ddd;
   --color-gray: #c4c4c4;
   --color-purple: #8000ff;
@@ -90,8 +92,8 @@ html {
   --color-light-blue: #6bc5f8;
   --color-navbarBorder-dark: #e2e2e207;
   --color-shadowDark: rgba(0, 0, 0, 0.137);
-  --static-heading-gradient-blue: #b0f3f1;
-  --static-heading-gradient-pink: #ffcfdf;
+  --static-heading-gradient-yellow: #dddb76;
+  --static-heading-gradient-pink: #f37f7f;
   --tech-stack-box-first-color: #1a1a29;
   --tech-stack-box-second-color: rgba(27, 27, 40, 0);
   --tech-stack-box-border-color: #292929;
@@ -157,17 +159,17 @@ html {
   left: -20px;
 }
 .light-mode {
-  --color-dark-mode: #ece7e1;
-  --color-theme-reverse: #11111b;
+  --color-dark-mode: #9fdcff;
+  --color-theme-reverse: #000030;
   --color-black: #fff;
   --color-white: #000;
   --color-ddd-color: rgb(31, 31, 31);
   --color-navbarBorder-dark: #d1d6eb;
-  --static-heading-gradient-blue: #0f7878;
-  --static-heading-gradient-pink: #f09bb9;
+  --static-heading-gradient-yellow: #71780f;
+  --static-heading-gradient-pink: #f09b9b;
   --color-shadowDark: #e2ddd7;
   --tech-stack-box-first-color: #e7e2db;
-  --tech-stack-box-second-color: #ece7e100;
+  --tech-stack-box-second-color: #9fdcff00;
   --tech-stack-box-border-color: #dad5cf;
 }
 .setting-container {
@@ -591,10 +593,10 @@ noscript {
   align-items: flex-start;
   background: linear-gradient(
     -45deg,
-    var(--color-light-blue),
-    var(--color-light-purple),
-    var(--color-light-blue),
-    var(--color-light-purple)
+    var(--color-yellow),
+    var(--color-red),
+    var(--color-yellow),
+    var(--color-red)
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -628,7 +630,7 @@ noscript {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-color: #03e6ff;
+  background-color: var(--color-jello);
   -webkit-animation: 0.9s both jello-vertical;
   animation: 0.9s both jello-vertical;
 }
@@ -784,12 +786,12 @@ noscript {
     linear,
     left top,
     right top,
-    var(--static-heading-gradient-blue),
+    var(--static-heading-gradient-yellow),
     var(--static-heading-gradient-pink)
   );
   background-image: -webkit-linear-gradient(
     left,
-    var(--static-heading-gradient-blue),
+    var(--static-heading-gradient-yellow),
     var(--static-heading-gradient-pink)
   );
 }
@@ -878,7 +880,7 @@ noscript {
   font-weight: 500;
   background-image: linear-gradient(
     90deg,
-    var(--static-heading-gradient-blue),
+    var(--static-heading-gradient-yellow),
     var(--static-heading-gradient-pink)
   );
   background-clip: text;
@@ -892,7 +894,7 @@ noscript {
   height: 1px;
   background-image: linear-gradient(
     90deg,
-    var(--static-heading-gradient-blue),
+    var(--static-heading-gradient-yellow),
     var(--static-heading-gradient-pink)
   );
 }
@@ -967,17 +969,17 @@ noscript {
     linear,
     left top,
     right top,
-    var(--static-heading-gradient-blue),
+    var(--static-heading-gradient-yellow),
     var(--static-heading-gradient-pink)
   );
   background-image: -webkit-linear-gradient(
     left,
-    var(--static-heading-gradient-blue),
+    var(--static-heading-gradient-yellow),
     var(--static-heading-gradient-pink)
   );
   background-image: linear-gradient(
     90deg,
-    var(--static-heading-gradient-blue),
+    var(--static-heading-gradient-yellow),
     var(--static-heading-gradient-pink)
   );
   background-clip: text;
@@ -1229,7 +1231,7 @@ footer {
 .footer-blob {
   width: 100%;
   height: 200px;
-  background-color: var(--color-light-purple);
+  background-color: var(--color-light-blue);
   border-radius: 50%;
   filter: blur(100px);
   opacity: 0.7;
@@ -1299,10 +1301,10 @@ footer {
   font-size: 2rem;
   background: linear-gradient(
     -45deg,
-    var(--color-light-blue),
-    var(--color-light-purple),
-    var(--color-light-blue),
-    var(--color-light-purple)
+    var(--color-yellow),
+    var(--color-red),
+    var(--color-yellow),
+    var(--color-red)
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -2021,7 +2023,7 @@ footer {
   background-image: linear-gradient(
     90deg,
     var(--static-heading-gradient-pink),
-    var(--static-heading-gradient-blue)
+    var(--static-heading-gradient-yellow)
   );
   height: 32px;
   width: 100%;
